@@ -52,7 +52,7 @@ label {
     margin: 0.5rem 0; 
 }
 
-p {
+.uservalidation {
     padding: 3px;
     font-weight: 100;
     font-size: 1.1rem;
