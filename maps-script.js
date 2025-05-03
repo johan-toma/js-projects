@@ -31,10 +31,11 @@ async function initMap() {
     marker = new google.maps.marker.AdvancedMarkerElement({
         map,
         content: icon,
-        
     });
-    infoWindow = new google.maps.InfoWindow({});
 
+
+
+    infoWindow = new google.maps.InfoWindow({});
     placeAutocomplete.addEventListener('gmp-select', async ({ placePrediction }) => {
         const place = placePrediction.toPlace();
         await place.fetchFields({ fields: ['displayName', 'formattedAddress', 'location'] });
@@ -52,6 +53,8 @@ async function initMap() {
         updateInfoWindow(content, place.location);
         marker.position = place.location;
     });
+
+    
 }
 // Helper function to create an info window.
 function updateInfoWindow(content, center) {
