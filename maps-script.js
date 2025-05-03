@@ -14,11 +14,6 @@ async function initMap() {
         zoom: 13,
         mapId: '4504f8b37365c3d0',
         mapTypeControl: false,
-        animation: google.maps.Animation.DROP,
-        icon: {
-          url: "mymarker.svg",
-          scaledSize: new google.maps.Size(64, 32)
-        },
     });
 
     const placeAutocomplete = new google.maps.places.PlaceAutocompleteElement();
@@ -29,9 +24,14 @@ async function initMap() {
 
     card.appendChild(placeAutocomplete);
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(card);
-
+    const icon = document.createElement("img");
+    icon.src = "mymarker.svg";
+    icon.style.width = "32px";
+    icon.style.height = "32px";
     marker = new google.maps.marker.AdvancedMarkerElement({
         map,
+        content: icon,
+        
     });
     infoWindow = new google.maps.InfoWindow({});
 
