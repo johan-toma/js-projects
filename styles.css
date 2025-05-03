@@ -1,5 +1,6 @@
 * {
     font-family: "Irish Grover";
+    font-weight: 100;
 }
 
 #map {
@@ -35,5 +36,22 @@ body {
 
 .aside .aside-text {
     font-size: 11px;
+}
+
+.place-autocomplete-card {
+    margin: 1rem;
+    padding: 0.5rem 6rem; 
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    background-color: white;
+    box-shadow: 0 2px 2.5px #999;
+}
+
+.place-autocomplete-card p {
+    text-align: center;
+    font-size: 16px;
+    
 }
 
