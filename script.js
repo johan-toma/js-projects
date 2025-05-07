@@ -12,13 +12,15 @@ document.addEventListener('mousemove', (e) => {
 
     //left, top A
     //right, bottom B
-
-    if(findPoint(buttonPosition.left+100, buttonPosition.top, buttonPosition.right+100, buttonPosition.bottom, mouseX, mouseY)) {
-        setButtonPosition(e.target);
+    const distanceY = buttonPosition.y - mouseY + buttonPosition.height / 2; 
+    const distanceX = buttonPosition.X - mouseX + buttonPosition.width / 2;
+    const horizontalOffset = buttonPosition.width / 2 + offset;
+    const verticalOffset = buttonPosition.height / 2 + offset;
+    
+    if (findPoint(buttonPosition.left, buttonPosition.top, buttonPosition.right, buttonPosition.bottom, mouseX, mouseY)) {
+        setButtonPosition((buttonPosition.x + horizontalOffset / distanceX * 10), (buttonPosition.y + verticalOffset / distanceY * 10));
     }
-    else if (findPoint(buttonPosition.left, buttonPosition.top, buttonPosition.right, buttonPosition.bottom, mouseX, mouseY)) {
-        setButtonPosition(e.target);
-    }
+ 
     
 });
 
@@ -38,15 +40,7 @@ function findPoint(x1,y1,x2,y2,x,y) {
 
 }
 
-function setButtonPosition(btn) {
-    btn.style.right = `${Math.floor(Math.random() * 100)}px`;
-    btn.style.top = `${Math.floor(Math.random() * 100)}px`
-
-    if(Math.floor(Math.random() * 100) < 100) {
-        btn.style.top = `${Math.floor(Math.random() * 300) + 100}px`
-    }
-
-    if(Math.floor(Math.random() * 100) > 100) {
-        btn.style.right = `${Math.floor(Math.random()) * -10}px`;
-    }
+function setButtonPosition(left, top) {
+    button.style.top = `${top}px`;
+    button.style.left = `${left}px`;
 }
