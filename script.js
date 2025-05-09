@@ -1,4 +1,5 @@
 const navLinks = document.querySelectorAll('.navLink');
+
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -7,4 +8,3 @@ navLinks.forEach(link => {
     });
 });
 
-//use e.preventdefault cuz they a tags default behaviour (jumping to a section or new URL)
