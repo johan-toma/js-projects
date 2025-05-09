@@ -1,0 +1,49 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 35%;
+}
+
+nav ul li {
+    display: inline;
+    padding: 20px;
+}
+
+a {
+    font-size: 1.2rem;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 150ms ease-in-out;
+    font-size: 1.2rem;
+    text-decoration: none;
+    background-color: #E1E1E1;
+}
+
+a.active {
+    background-color: #FAA0FA;
+    color: black;
+}
+
+nav ul li a:hover {
+    background-color: #999;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
