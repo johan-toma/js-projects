@@ -1,0 +1,46 @@
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.modal-content {
+    padding: 20px;
+    width: 50%;
+    margin: 15% auto;
+    background-color: white;
+    border-radius: 0.3rem;
+}
+
+.modal-content p {
+    font-size: 1.4rem;
+    font-weight: 100;
+    letter-spacing: 1.2px;
+}
+
+.close {
+    position: absolute;
+    right: 1.5rem;
+    font-size: 2rem;
+    transition: 150ms ease-in-out;
+}
+
+.close:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.modal-button {
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 1rem;
+    box-shadow: inset 0 0 0 1px black;
+    border: none;
+    margin: 0;
+    outline: none;
+}
